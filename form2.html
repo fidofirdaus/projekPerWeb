@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<script type="text/javascript">
+		alert("Klik OK untuk melanjutkan!")
+	</script>
+	<h1>Sign UP</h1>
+	<form>
+		<input type="text" name="username" placeholder="Username" autocomplete="off" required>
+		<input type="email" name="email" placeholder="Email" autocomplete="off">
+		<input type="text" name="nomorhp" placeholder="Nomor HP" autocomplete="off" maxlength="13" 
+		onkeypress="isInputNumber(event)">
+			<script>
+				function isInputNumber(evt){
+					var ch = String.fromCharCode(evt.which);
+					if(!(/[0-9]/.test(ch))){
+						evt.preventDefault();
+					}
+				}
+			</script>
+		<input type="password" name="password" placeholder="Password">
+		<input type="password" name="password" placeholder="Konfirmasi Password">
+		<div>
+			<p>Masukkan Jenis Kelamin Anda :</p> 
+			<input type="radio" name="jenis_kelamin"><label>Laki-Laki</label>
+			<input type="radio" name="jenis_kelamin"><label>Perempuan</label><br>
+			<p>Masukkan Hobi Anda :</p>
+			<input type="checkbox" name="hobi"><label>Olahraga</label>
+			<input type="checkbox" name="hobi"><label>Seni</label>
+			<input type="checkbox" name="hobi"><label>Musik</label><br>
+		</div>
+		<input type="submit" name="submit" onclick="confirm('Sudah Yakin?')">
+	</form>
+</body>
+</html>
